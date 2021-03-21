@@ -37,6 +37,7 @@ struct LibraryView: View {
                 }
             }
         }
+        .background(Color.Neumorphic.main)
         .onAppear {
             viewModel.initialize()
         }
