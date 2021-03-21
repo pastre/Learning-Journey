@@ -26,17 +26,10 @@ struct LibraryView: View {
                     )
                 }
                 .padding()
-                VStack {
-                    ForEach(viewModel.strands, id: \.name) { strand in
-                        HStack {
-                            Text(strand.name)
-                            Spacer()
-                            Image(systemName: "chevron")
-                        }
-                    }
-                }
+                buildStrandsSection(using: viewModel.strands)
             }
         }
+        .navigationTitle("Library")
         .background(Color.Neumorphic.main)
         .onAppear {
             viewModel.initialize()
@@ -49,6 +42,7 @@ struct LibraryView: View {
                 Text(title)
                     .font(.title2)
                     .bold()
+                
                 Spacer()
             }
             
@@ -65,17 +59,28 @@ struct LibraryView: View {
     }
     
     private func buildStrandsSection(using strands: [LearningStrand]) -> some View{
-        VStack(spacing:100) {
-            ForEach(strands, id: \.name) { strand in
-                Spacer()
-                HStack {
-                    Text(strand.name)
-                    Spacer()
-                    Image(systemName: "chevron.compact.left")
+        HStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 32)
+                    .fill(Color.Neumorphic.main)
+                    .softOuterShadow()
+                VStack {
+                    ForEach(strands, id: \.name) { strand in
+                        HStack {
+                            Text(strand.name)
+                                .padding(.leading, 32)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .padding(.trailing, 32)
+                        }
+                        .padding(.vertical, 16)
+                    }
                 }
-                Spacer()
+                .padding(.vertical, 8)
+                
             }
         }
+        .padding()
     }
 }
 
@@ -157,33 +162,7 @@ struct LibraryView_Previews: PreviewProvider {
 
 final class PreviewFetchInProgressObjectivesUseCase: FetchInProgressObjectivesUseCase {
     func execute(then handle: (Result<[LearningObjective], Error>) -> Void) {
-        handle(.success([
-            .init(
-                coreKeywords: [],
-                electiveKeywords: [],
-                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
-            ),
-            .init(
-                coreKeywords: [],
-                electiveKeywords: [],
-                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
-            ),
-            .init(
-                coreKeywords: [],
-                electiveKeywords: [],
-                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
-            ),
-            .init(
-                coreKeywords: [],
-                electiveKeywords: [],
-                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
-            ),
-            .init(
-                coreKeywords: [],
-                electiveKeywords: [],
-                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
-            ),
-        ]))
+        handle(.failure(NSError(domain: "", code: 1, userInfo: nil)))
     }
 }
 
@@ -193,8 +172,28 @@ final class PreviewFetchRecommendationObjectivesUseCase: FetchRecommendationObje
             .init(
                 coreKeywords: [],
                 electiveKeywords: [],
-                name: "Mock"
-            )
+                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
+            ),
+            .init(
+                coreKeywords: [],
+                electiveKeywords: [],
+                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
+            ),
+            .init(
+                coreKeywords: [],
+                electiveKeywords: [],
+                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
+            ),
+            .init(
+                coreKeywords: [],
+                electiveKeywords: [],
+                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
+            ),
+            .init(
+                coreKeywords: [],
+                electiveKeywords: [],
+                name: "Learn about monetization and business decisions that need to be made when planning the development of an app."
+            ),
         ]))
     }
 }
