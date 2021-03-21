@@ -3,16 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D72BB6432606DC6300CEDB88 /* LibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BB6422606DC6300CEDB88 /* LibraryService.swift */; };
+		D72BB6482606DC8D00CEDB88 /* ObjectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BB6472606DC8D00CEDB88 /* ObjectiveView.swift */; };
+		D72BB64E2606E05700CEDB88 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BB64D2606E05700CEDB88 /* AppEnvironment.swift */; };
 		D7577BB4260589B100577D6A /* LearningJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BB3260589B100577D6A /* LearningJourneyApp.swift */; };
 		D7577BB6260589B100577D6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BB5260589B100577D6A /* ContentView.swift */; };
 		D7577BB8260589BC00577D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7577BB7260589BC00577D6A /* Assets.xcassets */; };
 		D7577BBB260589BC00577D6A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7577BBA260589BC00577D6A /* Preview Assets.xcassets */; };
 		D7577BC6260589BC00577D6A /* LearningJourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BC5260589BC00577D6A /* LearningJourneyTests.swift */; };
 		D7577BD1260589BC00577D6A /* LearningJourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BD0260589BC00577D6A /* LearningJourneyUITests.swift */; };
+		D7577BE326058C1600577D6A /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = D7577BE226058C1600577D6A /* Neumorphic */; };
+		D7577BEA26058C6D00577D6A /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BE926058C6D00577D6A /* LibraryView.swift */; };
+		D7577BF42606422600577D6A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BF32606422600577D6A /* Model.swift */; };
+		D7577BFF2606430100577D6A /* FetchInProgressObjectivesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BFE2606430100577D6A /* FetchInProgressObjectivesUseCase.swift */; };
+		D7577C042606432900577D6A /* FetchRecommendationObjectivesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577C032606432900577D6A /* FetchRecommendationObjectivesUseCase.swift */; };
+		D7577C092606434600577D6A /* FetchLearningStrandsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577C082606434600577D6A /* FetchLearningStrandsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D72BB6422606DC6300CEDB88 /* LibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryService.swift; sourceTree = "<group>"; };
+		D72BB6472606DC8D00CEDB88 /* ObjectiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectiveView.swift; path = ../../../../../Downloads/ObjectiveView.swift; sourceTree = "<group>"; };
+		D72BB64D2606E05700CEDB88 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		D7577BB0260589B100577D6A /* LearningJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7577BB3260589B100577D6A /* LearningJourneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningJourneyApp.swift; sourceTree = "<group>"; };
 		D7577BB5260589B100577D6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +57,11 @@
 		D7577BCC260589BC00577D6A /* LearningJourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningJourneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7577BD0260589BC00577D6A /* LearningJourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningJourneyUITests.swift; sourceTree = "<group>"; };
 		D7577BD2260589BC00577D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7577BE926058C6D00577D6A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		D7577BF32606422600577D6A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D7577BFE2606430100577D6A /* FetchInProgressObjectivesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchInProgressObjectivesUseCase.swift; sourceTree = "<group>"; };
+		D7577C032606432900577D6A /* FetchRecommendationObjectivesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRecommendationObjectivesUseCase.swift; sourceTree = "<group>"; };
+		D7577C082606434600577D6A /* FetchLearningStrandsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLearningStrandsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7577BE326058C1600577D6A /* Neumorphic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D72BB64C2606E04600CEDB88 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D72BB64D2606E05700CEDB88 /* AppEnvironment.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D7577BA7260589B100577D6A = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +121,8 @@
 		D7577BB2260589B100577D6A /* LearningJourney */ = {
 			isa = PBXGroup;
 			children = (
+				D72BB64C2606E04600CEDB88 /* Utils */,
+				D7577BE726058C4D00577D6A /* Scenes */,
 				D7577BB3260589B100577D6A /* LearningJourneyApp.swift */,
 				D7577BB5260589B100577D6A /* ContentView.swift */,
 				D7577BB7260589BC00577D6A /* Assets.xcassets */,
@@ -130,6 +158,60 @@
 			path = LearningJourneyUITests;
 			sourceTree = "<group>";
 		};
+		D7577BE726058C4D00577D6A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D7577BE826058C5700577D6A /* Library */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D7577BE826058C5700577D6A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D7577BFB2606428400577D6A /* Data */,
+				D7577BF22606420700577D6A /* Domain */,
+				D7577BF12606420200577D6A /* View */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D7577BF12606420200577D6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7577BE926058C6D00577D6A /* LibraryView.swift */,
+				D72BB6472606DC8D00CEDB88 /* ObjectiveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7577BF22606420700577D6A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D7577BFC260642EC00577D6A /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D7577BFB2606428400577D6A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D7577BF32606422600577D6A /* Model.swift */,
+				D72BB6422606DC6300CEDB88 /* LibraryService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D7577BFC260642EC00577D6A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				D7577BFE2606430100577D6A /* FetchInProgressObjectivesUseCase.swift */,
+				D7577C032606432900577D6A /* FetchRecommendationObjectivesUseCase.swift */,
+				D7577C082606434600577D6A /* FetchLearningStrandsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +228,9 @@
 			dependencies = (
 			);
 			name = LearningJourney;
+			packageProductDependencies = (
+				D7577BE226058C1600577D6A /* Neumorphic */,
+			);
 			productName = LearningJourney;
 			productReference = D7577BB0260589B100577D6A /* LearningJourney.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +302,9 @@
 				Base,
 			);
 			mainGroup = D7577BA7260589B100577D6A;
+			packageReferences = (
+				D7577BE126058C1600577D6A /* XCRemoteSwiftPackageReference "neumorphic" */,
+			);
 			productRefGroup = D7577BB1260589B100577D6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7577C092606434600577D6A /* FetchLearningStrandsUseCase.swift in Sources */,
+				D72BB6482606DC8D00CEDB88 /* ObjectiveView.swift in Sources */,
 				D7577BB6260589B100577D6A /* ContentView.swift in Sources */,
+				D7577BEA26058C6D00577D6A /* LibraryView.swift in Sources */,
 				D7577BB4260589B100577D6A /* LearningJourneyApp.swift in Sources */,
+				D72BB64E2606E05700CEDB88 /* AppEnvironment.swift in Sources */,
+				D7577C042606432900577D6A /* FetchRecommendationObjectivesUseCase.swift in Sources */,
+				D72BB6432606DC6300CEDB88 /* LibraryService.swift in Sources */,
+				D7577BFF2606430100577D6A /* FetchInProgressObjectivesUseCase.swift in Sources */,
+				D7577BF42606422600577D6A /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D7577BE126058C1600577D6A /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7577BE226058C1600577D6A /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7577BE126058C1600577D6A /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7577BA8260589B100577D6A /* Project object */;
 }

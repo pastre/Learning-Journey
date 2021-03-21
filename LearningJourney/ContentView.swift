@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import Neumorphic
+
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        LibraryView(viewModel: .init(dependencies: .init(
+            fetchInProgressObjectives: PreviewFetchInProgressObjectivesUseCase(),
+            fetchRecommendationObjectivesUseCase: PreviewFetchRecommendationObjectivesUseCase(),
+            fetchLearningStrandsUseCase: PreviewFetchLearningStrandsUseCase()
+        )))
     }
 }
 
