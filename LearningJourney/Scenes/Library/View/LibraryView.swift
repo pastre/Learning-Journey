@@ -4,9 +4,11 @@ import Neumorphic
 struct LearningGoalsView: View {
     
     let goals: [LearningGoal]
+    let title: String
     
     var body: some View {
         Text("Salve")
+            .navigationTitle(title)
     }
 }
 
@@ -84,19 +86,27 @@ struct LibraryView: View {
                     .softOuterShadow()
                 VStack {
                     ForEach(strands, id: \.name) { strand in
-                        HStack {
-                            Text(strand.name)
-                                .padding(.leading, 32)
-                            Spacer()
-                            Image(systemName: "chevron.right")
-                                .padding(.trailing, 32)
+                        NavigationLink(destination: LearningGoalsView(
+                                        goals: strand.goals,
+                                        title: strand.name
+                        )) {
+                            HStack {
+                                Text(strand.name)
+                                    .padding(.leading, 32)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .padding(.trailing, 32)
+                            }
+                            .padding(.vertical, 16)
+                        
                         }
-                        .padding(.vertical, 16)
+                        .foregroundColor(.black)
                     }
                 }
                 .padding(.vertical, 8)
                 
             }
+            
         }
         .padding()
     }
