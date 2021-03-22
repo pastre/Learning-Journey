@@ -1,36 +1,54 @@
-//
-//  LibraryView.swift
-//  LearningJourney
-//
-//  Created by Bruno Pastre on 19/03/21.
-//
-
 import SwiftUI
 import Neumorphic
 
-struct LibraryView: View {
-    @Environment(\.appEnvironment) var appEnvironment: AppEnvironment
-    @StateObject var viewModel: ViewModel
+struct LearningGoalsView: View {
     
-    init(viewModel: ViewModel) {
+    let goals: [LearningGoal]
+    
+    var body: some View {
+        Text("Salve")
+    }
+}
+
+struct LibraryView: View {
+    @Environment(\.appEnvironment) private var appEnvironment: AppEnvironment
+    @StateObject private var viewModel: ViewModel
+    
+    @State private var isPresentingGoals: Bool = true
+    
+    init(
+        viewModel: ViewModel
+    ) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
     
     var body: some View {
-        ScrollView(.vertical) {
-            VStack {
-                ForEach(viewModel.sections, id: \.name) { section in
-                    buildQuickActionSection(
-                        title: section.name,
-                        using: section.objectives
-                    )
+        NavigationView {
+            ZStack {
+                Color.Neumorphic.main
+                    .ignoresSafeArea()
+                ScrollView(.vertical) {
+                    VStack {
+                        ForEach(viewModel.sections, id: \.name) { section in
+                            buildQuickActionSection(
+                                title: section.name,
+                                using: section.objectives
+                            )
+                        }
+                        HStack {
+                            Text("All")
+                                .font(.title2)
+                                .bold()
+                            Spacer()
+                        }
+                        .padding(.top, 24)
+                        buildStrandsSection(using: viewModel.strands)
+                    }
                 }
                 .padding()
-                buildStrandsSection(using: viewModel.strands)
             }
+            .navigationTitle("Library")
         }
-        .navigationTitle("Library")
-        .background(Color.Neumorphic.main)
         .onAppear {
             viewModel.initialize()
         }
@@ -111,7 +129,7 @@ extension LibraryView {
         init(dependencies: Dependencies) {
             self.dependencies = dependencies
         }
-        	        
+                    
         // MARK: - LibraryDisplayLogic
         func initialize() {
             dependencies.fetchInProgressObjectives.execute {
@@ -144,6 +162,10 @@ extension LibraryView {
                 }
             }
         }
+    }
+    
+    func handleStrandSelection(on strand: LearningStrand) {
+        print("Strand is \(strand)")
     }
     
 }
@@ -206,15 +228,15 @@ final class PreviewFetchLearningStrandsUseCase: FetchLearningStrandsUseCase {
                 goals: []
             ),
             .init(
-                name: "Design",
+                name: "Programming",
                 goals: []
             ),
             .init(
-                name: "Design",
+                name: "Metaskills",
                 goals: []
             ),
             .init(
-                name: "Design",
+                name: "Process",
                 goals: []
             ),
         ]))

@@ -1,14 +1,10 @@
-//
-//  ContentView.swift
-//  LearningJourney
-//
-//  Created by Bruno Pastre on 19/03/21.
-//
-
 import SwiftUI
 import Neumorphic
 
 struct ContentView: View {
+    
+    @Environment(\.appState) var appState: AppState
+    
     var body: some View {
         LibraryView(viewModel: .init(dependencies: .init(
             fetchInProgressObjectives: PreviewFetchInProgressObjectivesUseCase(),

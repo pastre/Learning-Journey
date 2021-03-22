@@ -10,6 +10,7 @@
 		D72BB6432606DC6300CEDB88 /* LibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BB6422606DC6300CEDB88 /* LibraryService.swift */; };
 		D72BB6482606DC8D00CEDB88 /* ObjectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BB6472606DC8D00CEDB88 /* ObjectiveView.swift */; };
 		D72BB64E2606E05700CEDB88 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BB64D2606E05700CEDB88 /* AppEnvironment.swift */; };
+		D72BB6562607C12C00CEDB88 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72BB6552607C12C00CEDB88 /* AppState.swift */; };
 		D7577BB4260589B100577D6A /* LearningJourneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BB3260589B100577D6A /* LearningJourneyApp.swift */; };
 		D7577BB6260589B100577D6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7577BB5260589B100577D6A /* ContentView.swift */; };
 		D7577BB8260589BC00577D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7577BB7260589BC00577D6A /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		D72BB6422606DC6300CEDB88 /* LibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryService.swift; sourceTree = "<group>"; };
 		D72BB6472606DC8D00CEDB88 /* ObjectiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectiveView.swift; path = ../../../../../Downloads/ObjectiveView.swift; sourceTree = "<group>"; };
 		D72BB64D2606E05700CEDB88 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		D72BB6552607C12C00CEDB88 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D7577BB0260589B100577D6A /* LearningJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7577BB3260589B100577D6A /* LearningJourneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningJourneyApp.swift; sourceTree = "<group>"; };
 		D7577BB5260589B100577D6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				D7577BB7260589BC00577D6A /* Assets.xcassets */,
 				D7577BBC260589BC00577D6A /* Info.plist */,
 				D7577BB9260589BC00577D6A /* Preview Content */,
+				D72BB6552607C12C00CEDB88 /* AppState.swift */,
 			);
 			path = LearningJourney;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				D7577BEA26058C6D00577D6A /* LibraryView.swift in Sources */,
 				D7577BB4260589B100577D6A /* LearningJourneyApp.swift in Sources */,
 				D72BB64E2606E05700CEDB88 /* AppEnvironment.swift in Sources */,
+				D72BB6562607C12C00CEDB88 /* AppState.swift in Sources */,
 				D7577C042606432900577D6A /* FetchRecommendationObjectivesUseCase.swift in Sources */,
 				D72BB6432606DC6300CEDB88 /* LibraryService.swift in Sources */,
 				D7577BFF2606430100577D6A /* FetchInProgressObjectivesUseCase.swift in Sources */,

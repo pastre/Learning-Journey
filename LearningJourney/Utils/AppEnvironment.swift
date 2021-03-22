@@ -8,7 +8,6 @@ final class DefaultAppEnvironment: AppEnvironment {
     var screenSize: CGSize { UIScreen.main.bounds.size }
 }
 
-
 private struct AppEnvironmentKey: EnvironmentKey {
     static var defaultValue: AppEnvironment = DefaultAppEnvironment()
 }

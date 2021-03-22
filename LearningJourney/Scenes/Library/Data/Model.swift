@@ -1,6 +1,7 @@
 import SwiftUI
 
 typealias LearningObjective = LearningStrand.LearningGoal.LearningObjective
+typealias LearningGoal = LearningStrand.LearningGoal
 
 struct LearningStrand {
     let name: String
